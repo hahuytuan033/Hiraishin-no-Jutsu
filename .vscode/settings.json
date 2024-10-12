@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "game 2D.sln"
+    "dotnet.defaultSolution": "Hiraishin-no-Jutsu.sln"
 }
