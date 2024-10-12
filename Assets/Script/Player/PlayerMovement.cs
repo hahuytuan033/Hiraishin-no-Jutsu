@@ -9,14 +9,19 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementInput;
     [SerializeField] private float speed;
 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+
+    }
     private void FixedUpdate()
     {
-        rb.velocity = movementInput * speed;
+        rb.velocity = movementInput * speed;   
     }
 
     private void OnMove(InputValue inputValue)
