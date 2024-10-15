@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     private Animator anim;
 
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,8 +20,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
+        // Animation
+        Animate();
     }
+
     private void FixedUpdate()
     {
         rb.velocity = movementInput * speed;
@@ -33,13 +34,7 @@ public class PlayerMovement : MonoBehaviour
         movementInput = inputValue.Get<Vector2>();
         if (movementInput != Vector2.zero)
         {
-            lastMove= movementInput;
-            Animate();
-        }
-        else
-        {
-            anim.SetFloat("LastMoveX", lastMove.x);
-            anim.SetFloat("LastMoveY", lastMove.y);
+            lastMove = movementInput;
         }
     }
 
@@ -47,6 +42,12 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetFloat("XInput", movementInput.x);
         anim.SetFloat("YInput", movementInput.y);
-        anim.SetFloat("Moving", movementInput.magnitude);
+        anim.SetBool("Walking", movementInput.magnitude > 0);
+
+        if (movementInput == Vector2.zero)
+        {
+            anim.SetFloat("LastMoveX", lastMove.x);
+            anim.SetFloat("LastMoveY", lastMove.y);
+        }
     }
 }
