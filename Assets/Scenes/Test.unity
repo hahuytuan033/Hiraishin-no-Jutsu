@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 2124275942}
   - component: {fileID: 2124275941}
   - component: {fileID: 2124275944}
+  - component: {fileID: 2124275946}
   - component: {fileID: 2124275940}
   - component: {fileID: 2124275945}
   m_Layer: 0
@@ -368,7 +369,7 @@ Transform:
   m_GameObject: {fileID: 2124275939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.49, y: -0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -420,6 +421,27 @@ MonoBehaviour:
   firePoint: {fileID: 1384914884}
   kunaiPrefab: {fileID: 414860740691235164, guid: b2625ba00791b15448349cb612886e66, type: 3}
   kunaiForce: 20
+--- !u!95 &2124275946
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124275939}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6f22bbf8b50a78a40898667f4f3c3ec0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
