@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
     {
         // Animation
         Animate();
+        Attack();
     }
-
     private void FixedUpdate()
     {
         rb.velocity = movementInput * speed;
@@ -48,6 +48,20 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetFloat("LastMoveX", lastMove.x);
             anim.SetFloat("LastMoveY", lastMove.y);
+        }
+    }
+
+    void Attack()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("Attacking", true);
+            anim.SetFloat("LastAttackX", lastMove.x);
+            anim.SetFloat("LastAttackY", lastMove.y);
+        }
+        else
+        {
+            anim.SetBool("Attacking", true);
         }
     }
 }
